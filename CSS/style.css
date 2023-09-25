@@ -1,0 +1,120 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: auto;
+    font-family:'Poppins', sans-serif;
+    font-weight: 200 400 600;
+    font-size: 15px;
+    padding-inline: 1rem;
+    padding-block: 4.5rem;
+}
+
+.card-container{
+    max-width:1024px;
+}
+
+.cardheading {
+    align-self: center;
+    text-align: center;
+}
+
+.card-text{
+    text-align: center;
+    color: hsl(229, 6%, 66%);
+}
+
+.cardheading>h2{
+    color: hsl(229, 6%, 66%);
+}
+
+.cards {
+    display: grid;
+    /* padding: auto; */
+    /* grid-template-areas: 'card'; */
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(5, 1fr);
+    row-gap: 1rem;
+    column-gap: 2rem;
+    margin-block-start: 3rem;
+}
+.card>p{
+    color: hsl(229, 6%, 66%);
+}
+.card{
+    box-shadow: rgba(17, 12, 48, 0.15) 0px 4px 8px;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+    
+
+.top-border-card-one{
+    border-top: 4px solid hsl(180, 62%, 55%);
+    grid-row:2/4;
+    grid-column: 1/3;
+}
+.top-border-card-two{
+    border-top: 4px solid hsl(0, 78%, 62%);
+    grid-row:1/3;
+    grid-column: 3/5;
+    /* margin-block-start: 7rem; */
+}
+.top-border-card-three{
+    border-top: 4px solid hsl(34, 97%, 64%);
+    grid-row: 3/5;
+    grid-column: 3/5;
+    /* margin-block-start: 7rem; */
+ }
+
+.top-border-card-four{
+    border-top: 4px solid hsl(212, 86%, 64%);
+    grid-row: 2/4;
+    grid-column: 5/7;
+}
+
+.img-wrapper{
+    margin-block-start: 2.5rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+/* Mobile */
+@media only screen and (max-width: 480px){
+  .cards{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 4rem;
+    
+  }
+  .top-border-card-three{
+    grid-row: unset;
+    grid-column: unset;
+  }
+.top-border-card-four{
+    grid-row: unset;
+    grid-column: unset;
+}
+
+.top-border-card-one{
+    grid-row: unset;
+    grid-column: unset;
+}
+
+.top-border-card-two{
+    grid-column: unset;
+    grid-row: unset;
+}
+
+}
+
+
